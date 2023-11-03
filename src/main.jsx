@@ -8,9 +8,7 @@ import Browse from './components/Browse.jsx'
 import Body from './components/Body.jsx'
 import {Provider} from 'react-redux'
 import store from './redux/authStore.js'
-
-
-
+import MoviePlaying from './components/movies/MoviePlaying.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +26,10 @@ const router = createBrowserRouter([
           {
               path:'/browse',
               element:<Browse/>
+          },
+          {
+            path:'/browse/:slug',
+            element:<MoviePlaying/>
           }
       ]
   }

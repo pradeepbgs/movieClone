@@ -13,19 +13,15 @@ const Login = () => {
 
  function signup(data){
    if(!isSignInForm){
-     // console.log(data.email)
      createUserWithEmailAndPassword(auth, data.email, data.password)
        .then((userCredential) => {
-         // Signed up 
          const user = userCredential.user;
-        //  setIsSignInForm(false)
         navigate('/browse')
          console.log(user)
        })
        .catch((error) => {
          const errorCode = error.code;
          const errorMessage = error.message;
-         // ..
          setError(errorCode+"-"+errorMessage)
        });
 
@@ -56,11 +52,6 @@ const Login = () => {
    }
  }
 
-//  function handleSignin(data){
-//   // e.preventDefault();
-//   console.log('signin');
-//   console.log(data)
-//  }
 
  const toggleMenu = () => {
   setIsSignInForm(!isSignInForm)

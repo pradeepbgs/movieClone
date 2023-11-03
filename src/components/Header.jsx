@@ -8,19 +8,16 @@ import { auth } from '../redux/firebase'
 function Header() {
   const status = useSelector(state => state.auth.status)
   const navigate = useNavigate()
-
   const handleSignOut = () =>{
     signOut(auth).then(() => {
-      // Sign-out successful.
       navigate('/')
     }).catch((error) => {
-      // An error happened.
       console.log(error)
     });
   }
 
   return (
-    <div className=' absolute h-20 w-full flex justify-between items-center px-[12%] '>
+    <div className=' absolute h-20 w-full flex justify-between items-center px-[12%]'>
       <Link>
       <img src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="" className='w-44'/>
       </Link>
