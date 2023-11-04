@@ -1,4 +1,3 @@
-// import { useNavigate } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { API_OPTIONS } from '../../redux/constant'
@@ -8,6 +7,7 @@ function MoviePlaying() {
   const [video, setVideo] = useState(null)
   const [movie, setMovie] = useState(null)
   const {slug} = useParams()
+
 
 
 const fetchVideos = async (slug) =>{
@@ -22,7 +22,7 @@ const fetchVideos = async (slug) =>{
    const response = await fetch(`https://api.themoviedb.org/3/movie/${slug}?language=en-US`, API_OPTIONS)
    const data = await response.json()
    setMovie(data)
-   console.log(data)
+ 
  }
 
 useEffect(() =>{

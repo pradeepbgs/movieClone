@@ -4,7 +4,7 @@ import Moviecard from './Moviecard'
 function MovieList({title, movies}) {
   return (
     <div className='bg-black text-white px-5 py-3 '>
-        <h1 className='text-2xl font-bold'>{title}</h1>
+        <h1 className='text-2xl font-bold py-1 px-1'>{title}</h1>
        <div className='flex overflow-x-scroll '>
        <div className='flex '>
         {
