@@ -18,15 +18,14 @@ const fetchVideos = async (slug) =>{
    setVideo(trailer)
  }
 
- const fetchMovieDetails = async (slug) =>{
+ const fetchMovieDetails = async () =>{
    const response = await fetch(`https://api.themoviedb.org/3/movie/${slug}?language=en-US`, API_OPTIONS)
    const data = await response.json()
    setMovie(data)
- 
  }
 
 useEffect(() =>{
-   fetchVideos(slug)
+   fetchVideos()
    fetchMovieDetails(slug)
 },[slug])
 

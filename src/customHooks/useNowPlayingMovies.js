@@ -12,9 +12,10 @@ const useNowPlayingMovies = () =>{
      dispatch(addNowPlayingMovies(data.results))
   }
 
-  useEffect( () =>{
-    NowPlayingMovies()
-  },[])
+  // useEffect( () =>{
+  //   NowPlayingMovies()
+  // })
+  NowPlayingMovies();
 }
 
 export default useNowPlayingMovies;

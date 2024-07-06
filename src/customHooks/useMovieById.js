@@ -17,7 +17,7 @@ const useMovieById  = (id) =>{
 
   useEffect( () =>{
     NowPlayingMovies()
-  },[])
+  })
 }
 
 
